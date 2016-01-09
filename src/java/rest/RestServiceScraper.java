@@ -17,13 +17,19 @@ public class RestServiceScraper {
 
     @Context
     private UriInfo context;
-    private Gson gson = new Gson();
-    private static FacadeGroup facade = new FacadeGroup();
-    List<Group> groups = new ArrayList();
+    private final Gson gson = new Gson();
+    private final FacadeGroup facade;
+    List<Group> groups;
 
     public RestServiceScraper() {
+        facade = new FacadeGroup();
+        groups = new ArrayList();
     }
 
+    /**
+     * api/group returns json formatted group-array
+     * @return json formatted Group-array 
+     */
     @GET
     @Produces("application/json")
     public Response getGroups() {
