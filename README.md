@@ -1,3 +1,7 @@
+#Notes
+
+Maybe come back to question 5: "Scheduled refresh of cache", and implement something cooler along the lines of the solution from Semesterproject's Reservation System.
+
 #General part
 
 >Explain in general about Threads and reasons to use them in modern programming languages
